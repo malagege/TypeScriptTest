@@ -222,3 +222,20 @@ class Live2{
 
 const live2 = new Live2('live2')
 // console.log(live2.#name) 無法印出
+
+
+interface CarProps {
+    name: string
+    age: number
+}
+
+class Car implements CarProps{
+    // private name: string 不可以寫成 private 修飾
+    name: string
+    age: number
+
+    constructor(name: string, age: number){
+        this.name = name
+        this.age = age
+    }
+}
