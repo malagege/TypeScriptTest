@@ -91,3 +91,47 @@ const obj: Card = {
     name: 'bruce',
     desc: 'xxx'
 }
+
+// function 
+
+// function hello (){}
+
+function hello (a: string, b: string){
+    return a + b
+}
+
+function hello2 (a: string, b: string): number {
+    console.log(a , b);
+    return 999
+}
+
+function hello3(a: number, b: boolean, c: string){
+    return 100
+}
+
+// function undefined
+
+function test2(a:number){
+    console.log(a);
+}
+
+function hello4(name: string,age?: number){   // 問號參數一定要放在後面
+    // let a: number
+    // a = age
+    // age 可能是 undefined ，但宣告 number 所以編譯會錯
+    
+    if( age !== undefined ){
+        test2(age)
+        return -1
+    }
+    return name + age
+}
+
+// 箭頭函式
+
+const func = () => {}
+
+
+const func2 = () => {
+    return 1
+}
