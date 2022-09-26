@@ -135,3 +135,20 @@ const func = () => {}
 const func2 = () => {
     return 1
 }
+
+
+// unknow 
+// 打API 回傳資料編譯器不知道類型
+// [JSONPlaceholder - Free Fake REST API](https://jsonplaceholder.typicode.com/)
+
+type Data = {
+    userId: number,
+    id: number,
+    title: string,
+    completed: boolean,
+}
+
+async function getData(){
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    const data = await res.json() as Data
+}
