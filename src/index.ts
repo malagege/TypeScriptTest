@@ -187,8 +187,25 @@ class Live{
         this.id = id1
         this.name = name
     }
+
+    start(){
+        this.id
+    }
 }
 
+class CarLive extends Live{
+    constructor(roomName: string, id1: string, name: string) {
+        super(roomName, id1, name);
+    }
+    
+    start(){
+        // super.id 訪問不到
+        super.name
+    }
+}
 
 const live = new Live('1號','000001','bruce')
+const carLive = new Live('2號','000002','bruce2')
 console.log(live)
+console.log(carLive)
+// carLive.name 因 protected 無法用
