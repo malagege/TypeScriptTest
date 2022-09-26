@@ -209,3 +209,16 @@ const carLive = new Live('2號','000002','bruce2')
 console.log(live)
 console.log(carLive)
 // carLive.name 因 protected 無法用
+
+
+class Live2{
+    // 私有變數
+    #name
+    constructor(name: string){
+        this.#name = name
+    }
+
+}
+
+const live2 = new Live2('live2')
+// console.log(live2.#name) 無法印出
