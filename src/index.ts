@@ -254,3 +254,18 @@ function print<T>(data: T){
 print<number>(999)
 print<string>('bruce')
 print<boolean>(true)
+
+
+class Print<T>{
+    data: T
+    constructor(d: T){
+        this.data = d
+    }
+}
+
+
+const p = new Print<number>(999);
+const p1 = new Print<string>('bruce');
+
+console.log(p)
+console.log(p1)
