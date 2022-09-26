@@ -35,4 +35,10 @@ const stat = LiveStatus.FAIL
 // 原因是 window.status 有用到變數
 // 可以參考: [程式語言教學誌 FB, YouTube: PYDOING: HTML DOM 快速導覽 - window 物件的屬性 status](https://pydoing.blogspot.com/2011/10/javascript-window-status.html)
 
-console.log(stat);
+
+// Union
+// 變數可以放多種型別
+let aaa: number | string;
+aaa = 1000
+aaa = 'str'
+
