@@ -269,3 +269,58 @@ const p1 = new Print<string>('bruce');
 
 console.log(p)
 console.log(p1)
+
+
+// utility
+// [TypeScript: Documentation - Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+
+
+// Record
+
+interface CatInfo {
+    age: number;
+    breed: string;
+}
+
+type CatName = "miffy" | "boris" | "mordred";
+// Record <屬性可以放的key,值>
+const cats: Record<CatName, CatInfo> = {
+miffy: { age: 10, breed: "Persian" },
+boris: { age: 5, breed: "Maine Coon" },
+mordred: { age: 16, breed: "British Shorthair" },
+};
+
+
+// Pick
+
+interface Todo {
+    title: string;
+    description: string;
+    completed: boolean;
+}
+
+type TodoPreview = Pick<Todo, "title" | "completed">;
+
+const todo: TodoPreview = {
+    title: "Clean room",
+    completed: false,
+};
+
+
+// Omit
+
+interface Todo {
+    title: string;
+    description: string;
+    completed: boolean;
+    createdAt: number;
+}
+
+type TodoPreview2 = Omit<Todo, "description">;
+
+const todo2: TodoPreview2 = {
+    title: "Clean room",
+    completed: false,
+    createdAt: 1615544252770,
+};
+   
