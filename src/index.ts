@@ -227,6 +227,7 @@ const live2 = new Live2('live2')
 interface CarProps {
     name: string
     age: number
+    start: () => void
 }
 
 class Car implements CarProps{
@@ -238,4 +239,8 @@ class Car implements CarProps{
         this.name = name
         this.age = age
     }
+    start(){
+        
+    }
+
 }
