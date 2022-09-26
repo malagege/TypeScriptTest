@@ -240,7 +240,17 @@ class Car implements CarProps{
         this.age = age
     }
     start(){
-        
+
     }
 
 }
+
+// 泛型
+
+function print<T>(data: T){
+    console.log('data', data)
+}
+
+print<number>(999)
+print<string>('bruce')
+print<boolean>(true)
