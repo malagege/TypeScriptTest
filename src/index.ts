@@ -70,7 +70,7 @@ interface User{
 // 注意這邊 C# 無法這樣用 interface 重複宣告，這邊是 TypeScript 獨有的
 type Card = {
     name: string,
-    desc: string
+    desc?: string
 }
 
 // type Card = {
@@ -84,7 +84,7 @@ interface Card2 {
 }
 
 interface Card2 {
-    age: number
+    age?: number          //可選
 }
 
 const obj: Card = {
