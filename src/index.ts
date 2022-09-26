@@ -54,3 +54,40 @@ a1 = 'str'
 let b1:B
 b1 = true
 
+// interface 
+
+interface User{
+    name: string;
+    age: number;
+}
+
+
+// Object 
+
+
+// type 跟 interface 差異，type 不能連續擴充，但是 interface 可以。
+// 下面 type 不可連續使用，但是 interface 可以
+// 注意這邊 C# 無法這樣用 interface 重複宣告，這邊是 TypeScript 獨有的
+type Card = {
+    name: string,
+    desc: string
+}
+
+// type Card = {
+//     age: number
+// }
+
+
+interface Card2 {
+    name: string,
+    desc: string
+}
+
+interface Card2 {
+    age: number
+}
+
+const obj: Card = {
+    name: 'bruce',
+    desc: 'xxx'
+}
