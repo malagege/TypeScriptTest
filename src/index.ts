@@ -167,3 +167,28 @@ name: string
 
 // 直接轉型會錯，透過 unknown 轉型就不會有問題
 const beta = data1 as unknown as Beta;
+
+
+// class
+
+// private 私有
+// public 公開
+// protected 受保護
+// 這上面關鍵字只在 TypeScript生效，但 JS 可以訪問到，如 console.log 都可以看到內容。後續 JS 版本有支援 privat
+// [Private class features - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+
+class Live{
+    roomName: string
+    private id: string
+    protected name: string
+
+    constructor(roomName: string, id1: string, name: string) {
+        this.roomName = roomName
+        this.id = id1
+        this.name = name
+    }
+}
+
+
+const live = new Live('1號','000001','bruce')
+console.log(live)
