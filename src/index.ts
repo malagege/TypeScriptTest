@@ -137,7 +137,7 @@ const func2 = () => {
 }
 
 
-// unknow 
+// unknown 
 // 打API 回傳資料編譯器不知道類型
 // [JSONPlaceholder - Free Fake REST API](https://jsonplaceholder.typicode.com/)
 
@@ -152,3 +152,18 @@ async function getData(){
     const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
     const data = await res.json() as Data
 }
+
+const data1: Data = {
+    "userId": 1,
+    "id": 1,
+    "title": "delectus aut autem",
+    "completed": false
+  }
+
+
+type Beta = {
+name: string
+}
+
+// 直接轉型會錯，透過 unknown 轉型就不會有問題
+const beta = data1 as unknown as Beta;
