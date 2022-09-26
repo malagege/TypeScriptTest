@@ -42,3 +42,15 @@ let aaa: number | string;
 aaa = 1000
 aaa = 'str'
 
+// type
+// 自定義型別，可以用 union(|) 放多種型別
+type A = number | string
+type B = boolean | string
+
+let a1: A 
+a1 = 999
+a1 = 'str'
+
+let b1:B
+b1 = true
+
